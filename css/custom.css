@@ -1,0 +1,59 @@
+.header_pages {
+	opacity: 1;
+	transform: translateX(0);
+	padding-bottom: 131px;
+	background: #b7babe;
+}
+
+.page-gallery {
+	background-color: #000;
+	padding-bottom: 77px;
+}
+
+.pages_title {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 100px;
+	color: #fff;
+	margin-top: -55px;
+	position: relative;
+	display: block;
+	margin-bottom: 41px;
+}
+
+.tabs-links {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 70px;
+}
+
+.tabs-link {
+	display: inline-block;
+	font-family: 'DaxlinePro';
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 46px;
+	background: #262729;
+	border-radius: 100px;
+	color: #fff;
+	transition: 0.3s;
+	padding: 7px 65px;
+}
+
+.tabs-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.tabs-content__image {
+	width: 47%;
+	height: 371px;
+	margin-bottom: 40px;
+}
+
+.tabs-content__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
