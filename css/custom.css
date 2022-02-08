@@ -445,6 +445,8 @@
 	background-color: #fff;
 	padding-top: 130px;
 	padding-bottom: 146px;
+	position: relative;
+	z-index: 10;
 }
 
 .partners__blocks {
@@ -474,4 +476,68 @@
 .facts {
 	background-color: #000;
 	padding: 143px 0;
+}
+
+.facts__title {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 100px;
+	line-height: 90px;
+	color: #fff;
+	margin-bottom: 72px;
+	display: block;
+}
+
+.facts__blocks {
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.facts__block {
+	position: relative;
+	max-width: 815px;
+	width: 100%;
+	border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+}
+.facts__block-year {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: right;
+	color: #fff;
+	opacity: 0.2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+.facts__block-pre-title {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	color: #fff;
+	margin-bottom: 6px;
+}
+.facts__block-desc {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	color: #fff;
+	opacity: 0.2;
+}
+
+.bot-content {
+	position: relative;
+	z-index: 10;
+	background: #b7babe;
+}
+
+.boxes {
 }
