@@ -28,16 +28,52 @@
 }
 
 .tabs-link {
-	display: inline-block;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: 'DaxlinePro';
 	font-weight: normal;
-	font-size: 30px;
+	font-size: 26px;
 	line-height: 46px;
 	background: #262729;
 	border-radius: 100px;
 	color: #fff;
 	transition: 0.3s;
-	padding: 7px 65px;
+	width: 250px;
+	height: 56px;
+	transition: 0.3s;
+}
+
+.tabs-link__icon {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 16px;
+	display: flex;
+}
+
+.tabs-link__icon svg path {
+	transition: 0.3s;
+}
+
+.tabs-link:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.tabs-link:hover svg path {
+	fill: #000;
+}
+
+.tabs-link_active {
+	color: #000;
+	background-color: #fff;
+}
+
+.tabs-link_active svg path {
+	fill: #000;
 }
 
 .tabs-content {
@@ -540,4 +576,109 @@
 }
 
 .boxes {
+	padding: 136px 0;
+}
+
+.bot-content__desc-container {
+	padding-top: 100px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.bot-content__desc {
+	max-width: 815px;
+	width: 100%;
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	color: #fff;
+}
+
+.boxes__wrapper {
+	max-width: 815px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.boxes__container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.box {
+	width: 350px;
+}
+
+.box__count {
+	font-family: 'DaxlinePro';
+	font-weight: 700;
+	font-size: 120px;
+	line-height: 120px;
+	text-transform: uppercase;
+	color: #000;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.box__desc {
+	font-family: 'DaxlinePro';
+	font-size: 20px;
+	line-height: 31px;
+}
+
+.box.dark .box__count {
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+
+.box.dark .box__desc {
+	color: #000;
+}
+
+.box.light .box__desc {
+	color: #fff;
+}
+
+.box.light .box__count {
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.main__content_about {
+	bottom: unset;
+	top: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.main__content-container_about {
+	justify-content: center;
+}
+
+.main__title-span_about {
+	font-size: 150px;
+	line-height: 150px;
+}
+
+.main__title-span_about:last-child {
+	margin-left: 300px;
+}
+
+.main__title-wrapper_about {
+	flex-direction: column;
+}
+
+.main__btn_about {
+	margin: 0;
+}
+
+.tabs-content {
+	display: none;
+}
+
+.tabs-content_active {
+	display: flex;
 }
