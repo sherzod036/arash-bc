@@ -12,4 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
 			contentId.classList.add('tabs-content_active')
 		})
 	})
+	// wait for document ready
+
+	let controller = new ScrollMagic.Controller()
+	let slidesTotal = 6
+	let transitionWidth = 480 / slidesTotal
+	let horizontalSlide = new TimelineMax()
+		// animate panels
+		.to('.main-advantages', 1, { x: '-' + transitionWidth + '%' })
+		.to('.main-advantages', 1, { x: '-' + transitionWidth * 2 + '%' })
+		.to('.main-advantages', 1, { x: '-' + transitionWidth * 3 + '%' })
+		.to('.main-advantages', 1, { x: '-' + transitionWidth * 4 + '%' })
+		.to('.main-advantages', 1, { x: '-' + transitionWidth * 5 + '%' })
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: '.mainbig-wrapper',
+		triggerHook: 'onLeave',
+		duration: '100%'
+	})
+		.setPin('.mainbig-wrapper')
+		.setTween(horizontalSlide)
+		//.addIndicators() // add indicators (requires plugin)
+		.addTo(controller)
 })

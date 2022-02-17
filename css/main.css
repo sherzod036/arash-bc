@@ -1854,11 +1854,29 @@ img {
 	height: auto;
 }
 
+.mainbig-wrapper {
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	background-color: #191b1d;
+	padding: 50px 0;
+}
+
+.main-advantages {
+	display: flex;
+	align-items: center;
+}
+
 .advantages {
 	background-color: #191b1d;
 	padding: 50px 0px 0px 0px;
 	position: relative;
 	z-index: 4;
+	flex: 0 0 100vw;
+}
+
+.scrollmagic-pin-spacer {
+	background-color: #191b1d;
 }
 
 .advantages__wrapper {
