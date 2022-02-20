@@ -29,10 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	)
 
 	// GSAP + SCROLLMAGIC
-	let simpleTitle = document.querySelector('.advantages__simple-title')
-	let simpleDesc = document.querySelector('.advantages__simple-desc')
-
-	console.log('simpleTitle.textContent()', simpleTitle)
+	let simpleTitle1 = document.querySelector('.advantages__simple-title.v1')
+	let simpleDesc1 = document.querySelector('.advantages__simple-desc.v1')
+	let simpleTitle2 = document.querySelector('.advantages__simple-title.v2')
+	let simpleDesc2 = document.querySelector('.advantages__simple-desc.v2')
+	let simpleTitle3 = document.querySelector('.advantages__simple-title.v3')
+	let simpleDesc3 = document.querySelector('.advantages__simple-desc.v3')
+	let simpleTitle4 = document.querySelector('.advantages__simple-title.v4')
+	let simpleDesc4 = document.querySelector('.advantages__simple-desc.v4')
+	let simpleTitle5 = document.querySelector('.advantages__simple-title.v5')
+	let simpleDesc5 = document.querySelector('.advantages__simple-desc.v5')
 
 	let controller = new ScrollMagic.Controller()
 	let horizontalSlide = new TimelineMax()
@@ -43,12 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				y: 0,
 				duration: 1.5,
 				onStart: function () {
-					simpleTitle.innerHTML = 'Офисы в центре города'
-					simpleDesc.innerHTML = 'Офисы в центре города'
+					simpleTitle1.classList.add('swipper')
 				},
-				onReverseComplete: function () {
-					simpleTitle.innerHTML = 'Офисы в центре города'
-					simpleDesc.innerHTML = 'Офисы в центре города'
+				onComplete: function () {
+					simpleTitle1.classList.remove('swipper')
+					simpleTitle2.classList.add('swipper')
 				}
 			}
 		)
@@ -59,12 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				y: 0,
 				duration: 1.5,
 				onStart: function () {
-					simpleTitle.innerHTML = 'Коммунальные расходы'
-					simpleDesc.innerHTML = `Арендуя офис в Arash Business Centre вы не будете думать о коммунальных расходах, так как все расходы включены в арендную плату`
+					// simpleTitle2.classList.add('swipper')
 				},
-				onReverseComplete: function () {
-					simpleTitle.innerHTML = 'Коммунальные расходы'
-					simpleDesc.innerHTML = `Арендуя офис в Arash Business Centre вы не будете думать о коммунальных расходах, так как все расходы включены в арендную плату`
+				onComplete: function () {
+					simpleTitle2.classList.remove('swipper')
+					simpleTitle3.classList.add('swipper')
 				}
 			}
 		)
@@ -75,14 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				y: 0,
 				duration: 1.5,
 				onStart: function () {
-					simpleTitle.innerHTML = 'Парковочное место'
-					simpleDesc.innerHTML =
-						'Удобное, охраняемое парковочное место предусмотренная для каждого офиса'
+					// simpleTitle3.classList.add('swipper')
 				},
-				onReverseComplete: function () {
-					simpleTitle.innerHTML = 'Парковочное место'
-					simpleDesc.innerHTML =
-						'Удобное, охраняемое парковочное место предусмотренная для каждого офиса'
+				onComplete: function () {
+					simpleTitle3.classList.remove('swipper')
+					simpleTitle4.classList.add('swipper')
 				}
 			}
 		)
@@ -93,14 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				y: 0,
 				duration: 1.5,
 				onStart: function () {
-					simpleTitle.innerHTML = 'Безопасность'
-					simpleDesc.innerHTML =
-						'Ваше офисное помещение всегда находится под круглосуточной охраной, в здании установлены системы видеонаблюдения, пожарные сигнализации и датчики движения'
+					// simpleTitle4.classList.add('swipper')
 				},
-				onReverseComplete: function () {
-					simpleTitle.innerHTML = 'Безопасность'
-					simpleDesc.innerHTML =
-						'Ваше офисное помещение всегда находится под круглосуточной охраной, в здании установлены системы видеонаблюдения, пожарные сигнализации и датчики движения'
+				onComplete: function () {
+					simpleTitle4.classList.remove('swipper')
+					simpleTitle5.classList.add('swipper')
 				}
 			}
 		)
@@ -111,14 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				y: 0,
 				duration: 1.5,
 				onStart: function () {
-					simpleTitle.innerHTML = 'Чистота'
-					simpleDesc.innerHTML =
-						'В помещениях и общих зонах бизнес-центра всегда поддерживается безупречный порядок и чистота'
+					// simpleTitle5.classList.add('swipper')
 				},
-				onReverseComplete: function () {
-					simpleTitle.innerHTML = 'Чистота'
-					simpleDesc.innerHTML =
-						'В помещениях и общих зонах бизнес-центра всегда поддерживается безупречный порядок и чистота'
+				onComplete: function () {
+					// simpleTitle5.classList.remove('swipper')
 				}
 			}
 		)
@@ -126,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	new ScrollMagic.Scene({
 		triggerElement: '.mainbig-wrapper',
 		triggerHook: 'onLeave',
-		duration: '400%'
+		duration: '500%'
 	})
 		.setPin('.mainbig-wrapper')
 		.setTween(horizontalSlide)
