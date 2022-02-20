@@ -1857,9 +1857,10 @@ img {
 .mainbig-wrapper {
 	width: 100%;
 	max-width: 100%;
-	overflow: hidden;
 	background-color: #191b1d;
-	padding: 50px 0;
+	padding: 100px 0;
+	height: 750px;
+	position: relative;
 }
 
 .advantages__simple-desc {
@@ -1873,16 +1874,20 @@ img {
 	text-shadow: 0px 4px 19px #000;
 }
 
-.main-advantages {
-	display: flex;
-	align-items: center;
+.page-offcies__bot-desc {
+	font-family: 'DaxlinePro';
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+	margin-top: 50px;
 }
 
 .advantages {
 	background-color: #191b1d;
-	padding: 50px 0px 0px 0px;
-	position: relative;
+	position: absolute;
 	z-index: 4;
+	width: 100%;
+	height: 750px;
 	flex: 0 0 100vw;
 }
 
@@ -1909,12 +1914,13 @@ img {
 	margin-left: 12px;
 }
 
-.advantages h1 {
+.advantages h1,
+.advantages__simple-title {
 	font-weight: 800;
 	font-size: 100px;
 	line-height: 101.63%;
 	/* or 102px */
-	color: #ffffff;
+	color: #fff;
 	margin: 34px 0px 26px 0px;
 	max-width: 770px;
 }

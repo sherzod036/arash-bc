@@ -411,11 +411,53 @@
 	color: #fff;
 }
 
+.page-offices__tabs-links a.active {
+	background-color: #000;
+	color: #fff;
+}
+
 .page-offices__tabs-links {
-	margin-bottom: 58px;
+	margin-bottom: 100px;
 }
 
 .page-offices__tabs-content {
+	display: none;
+}
+
+.page-offices__tabs-long-image,
+.page-offices__tabs-big-image {
+	display: block;
+}
+
+.page-offices__tabs-long-image {
+	margin-bottom: 30px;
+}
+
+.main-advantages {
+	position: relative;
+	height: 750px;
+}
+
+.main-contents {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+
+.page-offices__tabs-big-image {
+	margin-bottom: 42px;
+}
+
+.first-heading {
+	margin-top: -47px;
+}
+
+.page-offices__tabs-content.page-offices__tabs-content_active {
+	display: block;
+}
+
+.page-offices__tabs-inner {
 	display: flex;
 	justify-content: space-between;
 }
