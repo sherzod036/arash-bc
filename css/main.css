@@ -1871,7 +1871,7 @@ img {
 	display: none;
 }
 
-.advantages__simple-title.swipper {
+.advantages__simple-title.swipper, .advantages__simple-desc.swipper {
 	display: block;
 	-webkit-animation-name: textup;
 	animation-name: textup;

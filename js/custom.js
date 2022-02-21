@@ -50,10 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
 				duration: 1.5,
 				onStart: function () {
 					simpleTitle1.classList.add('swipper')
+					simpleDesc1.classList.add('swipper')
+				},
+				onReverseComplete: function () {
+					simpleTitle1.classList.add('swipper')
+					simpleTitle2.classList.remove('swipper')
+					simpleDesc1.classList.add('swipper')
+					simpleDesc2.classList.remove('swipper')
 				},
 				onComplete: function () {
 					simpleTitle1.classList.remove('swipper')
 					simpleTitle2.classList.add('swipper')
+					simpleDesc1.classList.remove('swipper')
+					simpleDesc2.classList.add('swipper')
 				}
 			}
 		)
@@ -66,9 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				onStart: function () {
 					// simpleTitle2.classList.add('swipper')
 				},
+				onReverseComplete: function () {
+					simpleTitle2.classList.add('swipper')
+					simpleTitle3.classList.remove('swipper')
+					simpleDesc2.classList.add('swipper')
+					simpleDesc3.classList.remove('swipper')
+				},
 				onComplete: function () {
 					simpleTitle2.classList.remove('swipper')
 					simpleTitle3.classList.add('swipper')
+					simpleDesc2.classList.remove('swipper')
+					simpleDesc3.classList.add('swipper')
 				}
 			}
 		)
@@ -81,9 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				onStart: function () {
 					// simpleTitle3.classList.add('swipper')
 				},
+				onReverseComplete: function () {
+					simpleTitle3.classList.add('swipper')
+					simpleTitle4.classList.remove('swipper')
+					simpleDesc3.classList.add('swipper')
+					simpleDesc4.classList.remove('swipper')
+				},
 				onComplete: function () {
 					simpleTitle3.classList.remove('swipper')
 					simpleTitle4.classList.add('swipper')
+					simpleDesc3.classList.remove('swipper')
+					simpleDesc4.classList.add('swipper')
 				}
 			}
 		)
@@ -96,9 +121,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				onStart: function () {
 					// simpleTitle4.classList.add('swipper')
 				},
+				onReverseComplete: function () {
+					simpleTitle4.classList.add('swipper')
+					simpleTitle5.classList.remove('swipper')
+					simpleDesc4.classList.add('swipper')
+					simpleDesc5.classList.remove('swipper')
+				},
 				onComplete: function () {
 					simpleTitle4.classList.remove('swipper')
 					simpleTitle5.classList.add('swipper')
+					simpleDesc4.classList.remove('swipper')
+					simpleDesc5.classList.add('swipper')
 				}
 			}
 		)
@@ -111,6 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				onStart: function () {
 					// simpleTitle5.classList.add('swipper')
 				},
+				onReverseComplete: function () {
+					simpleTitle4.classList.add('swipper')
+					simpleTitle5.classList.remove('swipper')
+					simpleDesc4.classList.add('swipper')
+					simpleDesc5.classList.remove('swipper')
+				},
 				onComplete: function () {
 					// simpleTitle5.classList.remove('swipper')
 				}
@@ -120,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	new ScrollMagic.Scene({
 		triggerElement: '.mainbig-wrapper',
 		triggerHook: 'onLeave',
-		duration: '500%'
+		duration: '300%'
 	})
 		.setPin('.mainbig-wrapper')
 		.setTween(horizontalSlide)
